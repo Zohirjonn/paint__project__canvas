@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #020024;
+  background: linear-gradient(70deg, #020024 0%, #090979 45%, #0077ff 100%);
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+  max-width: 1050px;
+}
+
+section {
+  background: #ffffff;
+}
+
+.drawing-board {
+  flex: 1;
+  overflow: hidden;
+}
+
+.drawing-board canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.toools-board {
+  padding: 15px 22px;
+}
+
+.toools-board .row {
+  margin-bottom: 22px;
+}
+
+.toools-board .row .options {
+  list-style: none;
+  margin: 10px 0 0 5px;
+}
+
+.toools-board .row .options .option {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.toools-board .row .options .option:is(:hover, .active) img {
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.toools-board .row .options .option span,
+.toools-board .row .options .option label {
+  color: #5a6168;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.toools-board .row .options .option:is(:hover, .active) span,
+.toools-board .row .options .option label {
+  color: #4a98f7;
+}
+
+.toools-board .row .options .option #fill-color {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+}
+
+.toools-board .row .options .option #fill-color:chacked~label {
+  color: #4a98f7;
+}
+
+.toools-board .row .options .option #fill-color #size-slider {
+  width: 100%;
+  height: 25px;
+  margin-top: 10px;
+}
+
+.toools-board .colors .options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toools-board .colors .options .option {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: 3px;
+  position: relative;
+}
+
+.toools-board .colors .options .option:nth-child(1) {
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+}
+
+.toools-board .colors .options .option:nth-child(2) {
+  background-color: black;
+}
+
+.toools-board .colors .options .option:nth-child(3) {
+  background-color: red;
+}
+
+.toools-board .colors .options .option:nth-child(4) {
+  background-color: green;
+}
+
+.toools-board .colors .options .option:nth-child(5) {
+  background-color: blue;
+}
+
+.toools-board .colors .options #color-picker {
+  cursor: pointer;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.colors .options .selected::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 12px;
+  width: 12px;
+  background: inherit;
+  border-radius: inherit;
+  border: 2px solid #fff;
+  transform: translate(-50%, -50%);
+}
+
+.colors .option:first-child .selected::before {
+  border-color: black;
+
+}
+
+.toools-board .buttons button {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 11px 0;
+  font-size: 1rem;
+  margin-bottom: 13px;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toools-board .buttons .clear-canvas {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  border: 1px solid #821212;
+  background-color: #821212c3;
+  transition: all 0.4s ease;
+}
+
+.toools-board .buttons .clear-canvas:hover {
+  background-color: #821212;
+  color: #fff;
+}
+
+.toools-board .buttons .save-image {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fafafb;
+  background-color: #0b75f6;
+  border: 1px solid #0b75f6;
+  transition: all 0.4s ease;
+}
+
+.toools-board .buttons .save-image:hover {
+  background-color: #0b26f6;
+}
+
+/*# sourceMappingURL=main.css.map */
